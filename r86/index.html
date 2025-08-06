@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>堀江貴文 株式投資講座</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary-color-scheme-main: #5D5CDE;
+            --secondary-accent-highlight: #FF6B35;
+            --tertiary-background-neutral: #1a1a2e;
+            --quaternary-text-primary: #16213e;
+            --quinary-surface-elevation: #0f3460;
+            --senary-gradient-start: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --septenary-shadow-depth: rgba(0, 0, 0, 0.15);
+            --octonary-border-radius: 12px;
+            --nonary-transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .comprehensive-layout-wrapper-container {
+            font-family: 'Hiragino Sans', 'Yu Gothic UI', 'Meiryo', system-ui, -apple-system, sans-serif;
+            line-height: 1.7;
+            color: var(--quaternary-text-primary);
+            background: linear-gradient(to bottom, #f8fafc, #e2e8f0);
+            min-height: 100vh;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
+        }
+
+        .premium-header-navigation-section {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            padding: 2rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .premium-header-navigation-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="rgba(255,255,255,0.1)"/><circle cx="80" cy="40" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="40" cy="80" r="1.5" fill="rgba(255,255,255,0.1)"/></svg>') repeat;
+            animation: stellar-drift-background 20s linear infinite;
+        }
+
+        @keyframes stellar-drift-background {
+            0% { transform: translateX(0) translateY(0); }
+            100% { transform: translateX(-100px) translateY(-100px); }
+        }
+
+        .dynamic-breathing-image-container {
+            display: inline-block;
+            position: relative;
+            z-index: 2;
+        }
+
+        .responsive-breathing-effect-visual {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            animation: gentle-breathing-motion 3s ease-in-out infinite;
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.4);
+        }
+
+        @keyframes gentle-breathing-motion {
+            0%, 100% { transform: scale(1); box-shadow: 0 0 20px rgba(255, 255, 255, 0.3); }
+            50% { transform: scale(1.02); box-shadow: 0 0 25px rgba(255, 255, 255, 0.4); }
+        }
+
+        .executive-introduction-headline-typography {
+            color: white;
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin: 1.5rem 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            position: relative;
+            z-index: 2;
+        }
+
+        .urgency-statistics-participation-banner {
+            background: linear-gradient(45deg, var(--secondary-accent-highlight), #ff8a50);
+            color: white;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: var(--octonary-border-radius);
+            text-align: center;
+            font-weight: 600;
+            font-size: 1.1rem;
+            box-shadow: 0 8px 32px var(--septenary-shadow-depth);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .urgency-statistics-participation-banner::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            animation: shimmer-effect-sweep 3s infinite;
+        }
+
+        @keyframes shimmer-effect-sweep {
+            0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+            100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+        }
+
+        .comprehensive-content-section-wrapper {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .strategic-countdown-timer-interface {
+            background: var(--tertiary-background-neutral);
+            color: white;
+            padding: 2rem;
+            border-radius: var(--octonary-border-radius);
+            text-align: center;
+            margin: 2rem 0;
+            box-shadow: 0 12px 48px rgba(0, 0, 0, 0.2);
+        }
+
+        .countdown-display-numerical-grid {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .individual-time-unit-container {
+            background: var(--primary-color-scheme-main);
+            padding: 1rem;
+            border-radius: 8px;
+            min-width: 60px;
+            text-align: center;
+        }
+
+        .time-value-display-number {
+            font-size: 1.8rem;
+            font-weight: bold;
+            display: block;
+        }
+
+        .time-unit-label-description {
+            font-size: 0.8rem;
+            opacity: 0.8;
+        }
+
+        .educational-content-block-section {
+            background: white;
+            padding: 2.5rem;
+            margin: 2rem 0;
+            border-radius: var(--octonary-border-radius);
+            box-shadow: 0 8px 32px var(--septenary-shadow-depth);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .educational-content-block-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--primary-color-scheme-main);
+        }
+
+        .content-heading-typography-style {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--quaternary-text-primary);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .interactive-cta-button-component {
+            background: linear-gradient(135deg, #10B981, #059669);
+            color: white;
+            border: none;
+            padding: 1.2rem 2.5rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: var(--octonary-border-radius);
+            cursor: pointer;
+            transition: var(--nonary-transition-smooth);
+            width: 100%;
+            margin: 1.5rem 0;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 8px 32px rgba(16, 185, 129, 0.3);
+        }
+
+        .interactive-cta-button-component:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 40px rgba(16, 185, 129, 0.4);
+        }
+
+        .interactive-cta-button-component::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .interactive-cta-button-component:hover::before {
+            left: 100%;
+        }
+
+        .responsive-image-container-wrapper {
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .optimized-responsive-image-element {
+            max-width: 100%;
+            height: auto;
+            border-radius: var(--octonary-border-radius);
+            box-shadow: 0 8px 32px var(--septenary-shadow-depth);
+            transition: var(--nonary-transition-smooth);
+        }
+
+        .optimized-responsive-image-element:hover {
+            transform: scale(1.02);
+        }
+
+        .professional-testimonial-quote-section {
+            background: linear-gradient(135deg, #f8fafc, #e2e8f0);
+            padding: 2rem;
+            border-radius: var(--octonary-border-radius);
+            margin: 2rem 0;
+            font-style: italic;
+            position: relative;
+            border-left: 4px solid var(--primary-color-scheme-main);
+        }
+
+        .mobile-responsive-breakpoint-adjustments {
+            padding: 0 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .executive-introduction-headline-typography {
+                font-size: 1.8rem;
+            }
+            
+            .comprehensive-content-section-wrapper {
+                padding: 0 1rem;
+            }
+            
+            .educational-content-block-section {
+                padding: 1.5rem;
+            }
+            
+            .countdown-display-numerical-grid {
+                gap: 0.5rem;
+            }
+            
+            .individual-time-unit-container {
+                min-width: 50px;
+                padding: 0.8rem;
+            }
+            
+            .time-value-display-number {
+                font-size: 1.4rem;
+            }
+        }
+
+        .dark-mode-compatibility-layer {
+            background: var(--tertiary-background-neutral);
+            color: white;
+        }
+
+        .floating-action-bubble-indicator {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 60px;
+            height: 60px;
+            background: var(--secondary-accent-highlight);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            box-shadow: 0 8px 32px rgba(255, 107, 53, 0.4);
+            animation: gentle-pulse-animation 2s infinite;
+            z-index: 1000;
+        }
+
+        @keyframes gentle-pulse-animation {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+    </style>
+</head>
+<body class="comprehensive-layout-wrapper-container">
+    <header class="premium-header-navigation-section">
+        <div class="dynamic-breathing-image-container">
+            <img src="img/cs-1.png" alt="堀江貴文" class="responsive-breathing-effect-visual">
+        </div>
+        <h1 class="executive-introduction-headline-typography">皆さんこんにちは、堀江貴文 です。</h1>
+        <div class="urgency-statistics-participation-banner">
+            収入の10倍を無料で手に入れましょう現在の参加者数は87,682名！ 空席は 500 名未満です、LINEを追加して無料で入手できます！
+        </div>
+    </header>
+
+    <main class="comprehensive-content-section-wrapper">
+        <div class="responsive-image-container-wrapper">
+            <img src="img/sc2.png" alt="無料参加" class="optimized-responsive-image-element">
+        </div>
+
+        <div class="educational-content-block-section">
+            <h2 class="content-heading-typography-style">無料のうちに、今すぐ参加しましょう！</h2>
+            
+            <div class="strategic-countdown-timer-interface">
+                <p style="font-size: 1.2rem; margin-bottom: 1rem;">参加カウントダウン</p>
+                <div class="countdown-display-numerical-grid">
+                    <div class="individual-time-unit-container">
+                        <span class="time-value-display-number" id="timer-minutes-display">30</span>
+                        <span class="time-unit-label-description">分</span>
+                    </div>
+                    <div class="individual-time-unit-container">
+                        <span class="time-value-display-number" id="timer-seconds-display">00</span>
+                        <span class="time-unit-label-description">秒</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="educational-content-block-section">
+            <h3 class="content-heading-typography-style">🏦「預金だけでは資産が目減りする時代」</h3>
+            <p>▼年間2%のインフレが続けば※</p>
+            <p>→ 72の法則で計算すると35年後に現金価値が半減</p>
+            <p>→ 銀行預金 vs 資産運用の差は5.8倍（※金融庁2024年調査に基づくシミュレーション値）</p>
+            
+            <h3 class="content-heading-typography-style" style="margin-top: 2rem;">📊なぜ今、株式投資が必要か？</h3>
+            <p>株式市場は、投資家が資産を多様化し、リスクを軽減するのに役立つ幅広い投資オプションを提供します。</p>
+            <p>そこで、私はより多くの人々が経済的自由を手に入れられるように手助けすることを決意し、無料の株式知識講座を開催することにしました。</p>
+            
+            <button class="interactive-cta-button-component" onclick="kkb()">
+                👉 今すぐLINEを追加して急騰予想銘柄を入手！
+            </button>
+        </div>
+
+        <div class="responsive-image-container-wrapper">
+            <img src="img/05.png" alt="経済状況" class="optimized-responsive-image-element">
+        </div>
+
+        <div class="educational-content-block-section">
+            <p>日本はかつて世界第3位の経済大国でした。現在、日本は深刻な不況と高齢化に直面しており、この動揺する時代において、私たちが直面する重要な問題は、退職後も経済的な問題に悩まされることなく、充実した生活を送ることができるかということです。皆様のご支援に報いるために、私の投資経験とテクニックを無料で共有し、誰もがより多くのお金を増やすのを支援します。</p>
+            <div class="urgency-statistics-participation-banner">
+                無料枠は500件未満 LINEを追加すると無料で投資情報が手に入る！
+            </div>
+        </div>
+
+        <div class="responsive-image-container-wrapper">
+            <img src="img/04.png" alt="投資教育" class="optimized-responsive-image-element">
+        </div>
+
+        <div class="professional-testimonial-quote-section">
+            <p>私は最近、金融教育に力を入れており、金融の知識や自分の投資の考え方を人々と共有するために奔走しています。私は「堀江貴文 株式技術交流共有クラブ」を設立し、多くの専門投資家を招待し、無料の公開講座を行います。私自身や他の専門投資家の投資経験や技術を使って、みなさんに投資でお金を稼ぐ方法を教えます。すべて完全に無料です！投資の力を最大限に引き出し、自分自身の財産を増やせるようにお手伝いします。あなたも、私と一緒に学んで、自分の未来を変えませんか？</p>
+        </div>
+
+        <div class="responsive-image-container-wrapper">
+            <img src="img/sc4.png" alt="データ受信" class="optimized-responsive-image-element">
+        </div>
+
+        <div class="responsive-image-container-wrapper">
+            <img src="img/sc5.jpg" alt="追加情報" class="optimized-responsive-image-element">
+        </div>
+
+        <div class="educational-content-block-section">
+            <h3 class="content-heading-typography-style">下のボタンをクリックしてください。</h3>
+            <p style="text-align: center; font-size: 1.2rem; font-weight: 600; margin: 1rem 0;">500万ドル相当のデータを受信</p>
+            
+            <button class="interactive-cta-button-component" onclick="kkb()">
+                👉 今すぐLINEを追加して急騰予想銘柄を入手！
+            </button>
+        </div>
+    </main>
+
+    <div class="floating-action-bubble-indicator" onclick="kkb()">
+        📱
+    </div>
+
+    <script>
+        function kkb() {
+            window.location.href="https://www.qqq.com";
+        }
+
+        // 倒计时功能
+        function initializeCountdownTimer() {
+            let totalSeconds = 30 * 60; // 30分钟
+
+            function updateTimerDisplay() {
+                const minutes = Math.floor(totalSeconds / 60);
+                const seconds = totalSeconds % 60;
+                
+                document.getElementById('timer-minutes-display').textContent = 
+                    minutes.toString().padStart(2, '0');
+                document.getElementById('timer-seconds-display').textContent = 
+                    seconds.toString().padStart(2, '0');
+                
+                if (totalSeconds > 0) {
+                    totalSeconds--;
+                } else {
+                    clearInterval(timerInterval);
+                    // 倒计时结束逻辑
+                }
+            }
+
+            updateTimerDisplay();
+            const timerInterval = setInterval(updateTimerDisplay, 1000);
+        }
+
+        // 深色模式支持
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.classList.add('dark');
+        }
+        
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+            if (event.matches) {
+                document.documentElement.classList.add('dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+            }
+        });
+
+        // 页面加载完成后初始化
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeCountdownTimer();
+        });
+    </script>
+</body>
+</html>
